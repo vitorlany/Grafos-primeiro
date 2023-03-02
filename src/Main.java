@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static void main(String[] args) {
-        String arquivo = "graph-test-100";
+        String arquivo = "graph-test-50000";
         int numero = 2;
         try {
             Grafo grafo = carregarGrafo(arquivo);
@@ -24,7 +24,6 @@ public class Main {
             System.out.println("Grau de Saida: " + grauSaida);
             System.out.println("Conjunto Sucessores: " + conjuntoSucessores);
             System.out.println("Conjunto Predecessores: " + conjuntoPredecessores);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
