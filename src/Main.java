@@ -4,14 +4,21 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
 
     public static void main(String[] args) {
-        String arquivo = "graph-test-50000";
-        int numero = 2;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ecreva o nome do arquivo: ");
+        String arquivo = scanner.nextLine();
+
+        System.out.print("Qual vértice?: ");
+        int numero = scanner.nextInt();
+
         try {
             Grafo grafo = carregarGrafo(arquivo);
 
@@ -46,7 +53,7 @@ public class Main {
             }
 
             if (check) {
-                grafo = new Grafo(list.get(0), list.get(1));
+                grafo = new Grafo(list.get(0));
                 check = false;
             } else {
                 grafo.addAresta(list.get(0), list.get(1));

@@ -6,7 +6,7 @@ public class Grafo {
     private final List<LinkedList<Integer>> grafoSucessores = new ArrayList<>();
     private final List<LinkedList<Integer>> grafoPredecessores = new ArrayList<>();
 
-    Grafo(int vertices, int arestas) {
+    Grafo(int vertices) {
         for (int i = 0; i <= vertices; i++) {
             grafoSucessores.add(new LinkedList<>());
             grafoPredecessores.add(new LinkedList<>());
